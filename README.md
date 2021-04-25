@@ -1,2 +1,3 @@
-# tools-tray-win
-Windows 用 Web ページやソフトをショートカットで即表示するツールです。
+# tools-tray
+
+.net 製 Web ページを即表示するツール

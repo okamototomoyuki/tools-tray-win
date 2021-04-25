@@ -1,0 +1,8 @@
+﻿<Window x:Class="toolstray.GoogleWindow" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:toolstray" mc:Ignorable="d" Title="GoogleWindow" Height="75" Width="800" Closing="WindowClosing" FocusManager.FocusedElement="{Binding ElementName=textBox}" WindowStyle="ToolWindow">
+    <TextBox x:Name="textBox" Text="{Binding Path=Hoge}" Background="Honeydew" KeyDown="OnKeyDownHandler"/>
+</Window>
