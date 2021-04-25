@@ -108,4 +108,7 @@ s (SourceTreeのパス)\SourceTree.exe mono
 ```
 
 ## 起動設定
-スタートアップにショートカットを置いておくと、起動時にいちいち実行する手間が省けます。
+下記のスタートアップフォルダにショートカットを置いておくと、PC 起動時に勝手に立ち上がるのでいちいち実行する手間が省けます。
+```
+C:\Users\(ユーザー名)\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+```
