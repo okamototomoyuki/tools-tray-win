@@ -6,7 +6,7 @@ Windows 用 Web ページ・EXE をホットキーで即表示・起動できる
 
 # ダウンロード
 
-[0.0.1](https://github.com/okamototomoyuki/tools-tray-win/releases/tag/0.0.1)
+[Release](https://github.com/okamototomoyuki/tools-tray-win/releases) から最新バージョンをダウンロードしてください。
 
 # 必要なもの
 
@@ -17,7 +17,7 @@ Windows 用 Web ページ・EXE をホットキーで即表示・起動できる
 
 ### キーの登録
 
-toolstray.exe を起動したらタスクトレイに本ツールが常駐します。  
+toolstray.exe を起動すると、タスクトレイに本ツールが常駐します。  
 ![image](https://user-images.githubusercontent.com/68187390/115990086-6634a580-a5fc-11eb-911f-99ac62af7d3e.png)
 
 右クリック -> 設定 でキー設定画面を開きます。  
@@ -44,7 +44,7 @@ in + alt + 登録キーがホットキーになります。
 ### EXE の登録
 
 URL 同様に EXE もパスで入力します。  
-下記は win + alt + e で Sakura エディタを開く例です。  
+下記は win + alt + e で Sakura Editorを開く例です。  
 
 ```
 e D:\software\sakura\sakura.exe
@@ -95,12 +95,17 @@ Windows で既に win + alt 同時押しが設定されているキーは登録�
 
 # オススメ設定
 
+## キー設定
+SourceTree と Sakura Editor を瞬時に開けるとなにかと便利です
+
 ```
 esc SettingWindow
 h GoogleWindow
 i https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate
 u https://translate.google.co.jp/?hl=ja&sl=ja&tl=en&op=translate
 e (サクラエディタのパス)\sakura.exe
-s (サクラエディタのパス)\SourceTree.exe mono
+s (SourceTreeのパス)\SourceTree.exe mono
 ```
 
+## 起動設定
+スタートアップにショートカットを置いておくと、起動時にいちいち実行する手間が省けます。
