@@ -55,7 +55,7 @@ namespace toolstray
 
             //タスクトレイアイコンを初期化する
             _notifyIcon = new NotifyIcon();
-            _notifyIcon.Text = "タスクトレイサンプル";
+            _notifyIcon.Text = "Tools-Tray-Win";
             _notifyIcon.Icon = System.Drawing.SystemIcons.Application;
 
             //タスクトレイに表示する
