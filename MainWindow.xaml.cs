@@ -61,13 +61,19 @@ namespace toolstray
             //タスクトレイに表示する
             _notifyIcon.Visible = true;
 
-            //アイコンにコンテキストメニュー「終了」を追加する
+            //アイコンにコンテキストメニューを追加する
             var menuStrip = new ContextMenuStrip();
+
+            var settingItem = new ToolStripMenuItem();
+            settingItem.Text = "設定";
+            settingItem.Click += new EventHandler(settingItem_Click);
+            menuStrip.Items.Add(settingItem);
+
 
             var exitItem = new ToolStripMenuItem();
             exitItem.Text = "終了";
-            menuStrip.Items.Add(exitItem);
             exitItem.Click += new EventHandler(exitItem_Click);
+            menuStrip.Items.Add(exitItem);
 
             _notifyIcon.ContextMenuStrip = menuStrip;
 
@@ -81,6 +87,12 @@ namespace toolstray
                     win.win.WindowClosing();
                 }
             }
+        }
+
+        //設定メニューのイベントハンドラ
+        void settingItem_Click(object? sender, EventArgs e)
+        {
+            SwitchWindow<SettingWindow>();
         }
 
         //終了メニューのイベントハンドラ
@@ -101,6 +113,28 @@ namespace toolstray
                 if (v is IWindow win)
                 {
                     if (v == w)
+                    {
+                        win.ActiveShow();
+                    }
+                    else
+                    {
+                        win.win.WindowClosing();
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// ウインドウ切替
+        /// </summary>
+        /// <typeparam name="T">プロセス種別</typeparam>
+        public static void SwitchWindow<T>() where T : IProc
+        {
+            foreach (var v in SettingWindow.Parsed.Values)
+            {
+                if (v is IWindow win)
+                {
+                    if (v is T)
                     {
                         win.ActiveShow();
                     }
