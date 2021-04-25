@@ -33,7 +33,7 @@ u https://translate.google.co.jp/?hl=ja&sl=ja&tl=en&op=translate
 ```
 
 行頭にキーボードのキー、空白を開けて URL または EXE のパスを記載します。  
-in + alt + 登録キーがホットキーになります。  
+win + alt + 登録キーがホットキーになります。  
 デフォルト設定は下記の意味になります。  
 
 * win + alt + esc : キー設定画面
@@ -87,7 +87,7 @@ s D:\software\SourceTree\SourceTree.exe mono
 
 # 登録できないキー
 
-Windows で既に win + alt 同時押しが設定されているキーは登録しても何も起こりません。  
+Windows で既に使われているキーは登録しても何も起こりません。  
 全てのキーを把握できていませんが下記は登録できませんでした。他のキーに割り当ててください。  
 
 * Y
@@ -108,7 +108,7 @@ s (SourceTreeのパス)\SourceTree.exe mono
 ```
 
 ## 起動設定
-下記のスタートアップフォルダにショートカットを置いておくと、PC 起動時に勝手に立ち上がるのでいちいち実行する手間が省けます。
+下記のスタートアップフォルダに toolstray.exe のショートカットを置いておくと、PC 起動時に勝手に立ち上がるのでいちいち実行する手間が省けます。
 ```
 C:\Users\(ユーザー名)\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 ```
